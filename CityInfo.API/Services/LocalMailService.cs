@@ -2,8 +2,8 @@
 {
     public class LocalMailService : IMailService
     {
-        private string _mailTo = "alven81.ak@gmail.com";
-        private string _mailFrom = "noreply@gmail.com";
+        private readonly string _mailTo = "alven81.ak@gmail.com";
+        private readonly string _mailFrom = "noreply@gmail.com";
 
         public void Send(string subject, string message)
         {
