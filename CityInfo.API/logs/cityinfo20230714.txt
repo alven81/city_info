@@ -1,0 +1,24 @@
+2023-07-14 12:14:44.418 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-07-14 12:14:44.757 +02:00 [DBG] Hosting starting
+2023-07-14 12:14:44.995 +02:00 [DBG] Using development certificate: CN=localhost (Thumbprint: DFC75F3BE372DE00EF55C66475E1374A3A6C3F36)
+2023-07-14 12:14:45.042 +02:00 [INF] Now listening on: https://localhost:7265
+2023-07-14 12:14:45.043 +02:00 [INF] Now listening on: http://localhost:5198
+2023-07-14 12:14:45.045 +02:00 [DBG] Loaded hosting startup assembly CityInfo.API
+2023-07-14 12:14:45.046 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-07-14 12:14:45.047 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-07-14 12:14:45.049 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-14 12:14:45.051 +02:00 [INF] Hosting environment: Development
+2023-07-14 12:14:45.052 +02:00 [INF] Content root path: C:\Users\kotttali\source\repos\CityInfo.API\CityInfo.API\
+2023-07-14 12:14:45.053 +02:00 [DBG] Hosting started
+2023-07-14 12:26:58.965 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-07-14 12:26:59.123 +02:00 [DBG] Hosting starting
+2023-07-14 12:26:59.297 +02:00 [DBG] Using development certificate: CN=localhost (Thumbprint: DFC75F3BE372DE00EF55C66475E1374A3A6C3F36)
+2023-07-14 12:26:59.344 +02:00 [INF] Now listening on: https://localhost:7265
+2023-07-14 12:26:59.345 +02:00 [INF] Now listening on: http://localhost:5198
+2023-07-14 12:26:59.346 +02:00 [DBG] Loaded hosting startup assembly CityInfo.API
+2023-07-14 12:26:59.346 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-07-14 12:26:59.347 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-07-14 12:26:59.348 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-14 12:26:59.349 +02:00 [INF] Hosting environment: Production
+2023-07-14 12:26:59.350 +02:00 [INF] Content root path: C:\Users\kotttali\source\repos\CityInfo.API\CityInfo.API\
+2023-07-14 12:26:59.350 +02:00 [DBG] Hosting started

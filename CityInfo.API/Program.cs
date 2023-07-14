@@ -44,7 +44,11 @@ builder.Services.AddTransient<IMailService, CloudMailService>();
 
 builder.Services.AddSingleton<CitiesDataStore>();
 
-builder.Services.AddDbContext<CityInfoContext>(DbContextOptions => DbContextOptions.UseSqlite("Data Source=CityInfo.db"));
+// Added link to db to appsetingDevelopment
+// On the production we have to take this sensitive data from environment
+builder.Services.AddDbContext<CityInfoContext>(
+    DbContextOptions => DbContextOptions.UseSqlite(
+        builder.Configuration["ConnectionStrings:CityInfoDBConnectionString"]));
 
 var app = builder.Build();
 
