@@ -79,8 +79,7 @@ namespace CityInfo.API.DbContexts
                         );
             base.OnModelCreating(modelBuilder);
         }
-
-   
+           
         // First variant how to connect to db
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
