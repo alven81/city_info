@@ -52,6 +52,8 @@ builder.Services.AddDbContext<CityInfoContext>(
 
 builder.Services.AddScoped<ICityInfoRepository, CityInfoRepository>();
 
+// Register autoMapper service in the container
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 
