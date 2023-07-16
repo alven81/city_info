@@ -50,14 +50,14 @@ namespace CityInfo.API.Services
             int cityId, 
             int pointOfInterestId)
         {
-            return await _context.PointOfInterest
+            return await _context.PointsOfInterest
                 .Where(p => p.CityId == cityId && p.Id == pointOfInterestId)
                 .FirstOrDefaultAsync();
         }
 
         public async Task<IEnumerable<PointOfInterest>> GetPointsOfInterestForCityAsync(int cityId)
         {
-            return await _context.PointOfInterest
+            return await _context.PointsOfInterest
                 .Where(p => p.CityId == cityId)
                 .ToListAsync();
         }
@@ -70,10 +70,15 @@ namespace CityInfo.API.Services
                 city.PointsOfInterest.Add(pointOfInterest);
             }
         }
+        public void DeletePointOfInterest(PointOfInterest pointOfInterest)
+        {
+            _context.PointsOfInterest.Remove(pointOfInterest);
+        }
 
         public async Task<bool> SaveChangesAsync()
         {
             return (await _context.SaveChangesAsync() >= 0);
         }
+
     }
 }
