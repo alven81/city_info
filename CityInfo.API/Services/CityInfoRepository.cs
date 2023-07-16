@@ -1,4 +1,5 @@
-﻿using CityInfo.API.DbContexts;
+﻿using CityInfo.API.Controllers;
+using CityInfo.API.DbContexts;
 using CityInfo.API.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,9 +8,11 @@ namespace CityInfo.API.Services
     public class CityInfoRepository : ICityInfoRepository
     {
         private readonly CityInfoContext _context;
+        private readonly ILogger<PointsOfInterestController> _logger;
 
-        public CityInfoRepository(CityInfoContext context) 
+        public CityInfoRepository(ILogger<PointsOfInterestController> logger, CityInfoContext context) 
         {
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
@@ -33,13 +36,22 @@ namespace CityInfo.API.Services
                 .Where(c => c.Id == cityId)
                 .FirstOrDefaultAsync();
         }
+        
+        public async Task<bool> CityExistsAsync(int cityId)
+        {
+            var result = await _context.Cities.AnyAsync(c => c.Id == cityId);
+
+            if (!result) _logger.LogInformation(
+                    $"City with id {cityId} wasn't found when accessing points of interest.");
+            return result;
+        }
 
         public async Task<PointOfInterest?> GetPointOfInterestForCityAsync(
             int cityId, 
-            int pointOdInterestId)
+            int pointOfInterestId)
         {
             return await _context.PointOfInterest
-                .Where(p => p.CityId == cityId && p.Id == pointOdInterestId)
+                .Where(p => p.CityId == cityId && p.Id == pointOfInterestId)
                 .FirstOrDefaultAsync();
         }
 
@@ -48,6 +60,20 @@ namespace CityInfo.API.Services
             return await _context.PointOfInterest
                 .Where(p => p.CityId == cityId)
                 .ToListAsync();
+        }
+
+        public async Task AddPointOfInterestForCityAsync(int cityId, PointOfInterest pointOfInterest)
+        {
+            var city = await GetCityAsync(cityId, false);
+            if (city != null)
+            {
+                city.PointsOfInterest.Add(pointOfInterest);
+            }
+        }
+
+        public async Task<bool> SaveChangesAsync()
+        {
+            return (await _context.SaveChangesAsync() >= 0);
         }
     }
 }
