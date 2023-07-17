@@ -103,3 +103,6 @@ C:\Users\kotttali\source\repos\CityInfo.API\CityInfo.API\bin\Debug\net6.0\Micros
 C:\Users\kotttali\source\repos\CityInfo.API\CityInfo.API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\kotttali\source\repos\CityInfo.API\CityInfo.API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\kotttali\source\repos\CityInfo.API\CityInfo.API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\kotttali\source\repos\CityInfo.API\CityInfo.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\kotttali\source\repos\CityInfo.API\CityInfo.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\kotttali\source\repos\CityInfo.API\CityInfo.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

@@ -1,8 +1,10 @@
+using System.Text;
 using CityInfo.API;
 using CityInfo.API.DbContexts;
 using CityInfo.API.Services;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Serilog;
 
 Log.Logger = new LoggerConfiguration()
@@ -54,6 +56,26 @@ builder.Services.AddScoped<ICityInfoRepository, CityInfoRepository>();
 // Register autoMapper service in the container
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+// Call authentication on Services collection
+builder.Services.AddAuthentication("Bearer")
+    // Register the services related to bearer token authentication
+    .AddJwtBearer(options =>
+        {
+            // Configure how to validate the token
+            options.TokenValidationParameters = new()
+            {
+                ValidateIssuer = true,
+                ValidateAudience = true,
+                ValidateIssuerSigningKey = true,
+                ValidIssuer = builder.Configuration["Authentication:Issuer"],
+                ValidAudience = builder.Configuration["Authentication:Audience"],
+                IssuerSigningKey = new SymmetricSecurityKey(
+                    Encoding.ASCII.GetBytes(builder.Configuration["Authentication:SecretForKey"]))
+            };
+
+        }
+    );
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -66,6 +88,9 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseRouting();
+
+// Add authentication to request pipeline
+app.UseAuthentication();
 
 app.UseAuthorization();
 

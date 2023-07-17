@@ -2499,3 +2499,32 @@ System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport
 2023-07-17 15:48:59.793 +02:00 [INF] Executed endpoint 'CityInfo.API.Controllers.AuthenticationController.Authenticate (CityInfo.API)'
 2023-07-17 15:48:59.794 +02:00 [DBG] Connection id "0HMS6PI1NV3GO" completed keep alive response.
 2023-07-17 15:48:59.796 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7265/api/authentication/authenticate application/json 111 - 200 - text/plain;+charset=utf-8 53.6339ms
+2023-07-17 16:52:31.541 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-07-17 16:52:31.719 +02:00 [DBG] Hosting starting
+2023-07-17 16:52:31.777 +02:00 [INF] User profile is available. Using 'C:\Users\kotttali\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-17 16:52:31.783 +02:00 [DBG] Reading data from file 'C:\Users\kotttali\AppData\Local\ASP.NET\DataProtection-Keys\key-0100cc4a-9dfa-4f9e-9d14-afdbf6350ee7.xml'.
+2023-07-17 16:52:31.810 +02:00 [DBG] Reading data from file 'C:\Users\kotttali\AppData\Local\ASP.NET\DataProtection-Keys\key-105c665d-a016-434f-8f4a-7fabc2029c13.xml'.
+2023-07-17 16:52:31.829 +02:00 [DBG] Reading data from file 'C:\Users\kotttali\AppData\Local\ASP.NET\DataProtection-Keys\key-1a7f63ed-aa9e-4fd9-a166-8c0668b397e4.xml'.
+2023-07-17 16:52:31.848 +02:00 [DBG] Reading data from file 'C:\Users\kotttali\AppData\Local\ASP.NET\DataProtection-Keys\key-78b71a3a-3808-4850-8bbc-f52949b8ae01.xml'.
+2023-07-17 16:52:31.877 +02:00 [DBG] Found key {0100cc4a-9dfa-4f9e-9d14-afdbf6350ee7}.
+2023-07-17 16:52:31.887 +02:00 [DBG] Found key {105c665d-a016-434f-8f4a-7fabc2029c13}.
+2023-07-17 16:52:31.890 +02:00 [DBG] Found key {1a7f63ed-aa9e-4fd9-a166-8c0668b397e4}.
+2023-07-17 16:52:31.892 +02:00 [DBG] Found key {78b71a3a-3808-4850-8bbc-f52949b8ae01}.
+2023-07-17 16:52:31.906 +02:00 [DBG] Considering key {78b71a3a-3808-4850-8bbc-f52949b8ae01} with expiration date 2023-09-03 07:58:14Z as default key.
+2023-07-17 16:52:31.912 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-07-17 16:52:31.921 +02:00 [DBG] Decrypting secret element using Windows DPAPI.
+2023-07-17 16:52:31.924 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-07-17 16:52:31.933 +02:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2023-07-17 16:52:31.939 +02:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2023-07-17 16:52:31.946 +02:00 [DBG] Using key {78b71a3a-3808-4850-8bbc-f52949b8ae01} as the default key.
+2023-07-17 16:52:31.949 +02:00 [DBG] Key ring with default key {78b71a3a-3808-4850-8bbc-f52949b8ae01} was loaded during application startup.
+2023-07-17 16:52:32.198 +02:00 [DBG] Using development certificate: CN=localhost (Thumbprint: DFC75F3BE372DE00EF55C66475E1374A3A6C3F36)
+2023-07-17 16:52:32.256 +02:00 [INF] Now listening on: https://localhost:7265
+2023-07-17 16:52:32.258 +02:00 [INF] Now listening on: http://localhost:5198
+2023-07-17 16:52:32.259 +02:00 [DBG] Loaded hosting startup assembly CityInfo.API
+2023-07-17 16:52:32.260 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-07-17 16:52:32.261 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-07-17 16:52:32.263 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-17 16:52:32.264 +02:00 [INF] Hosting environment: Development
+2023-07-17 16:52:32.265 +02:00 [INF] Content root path: C:\Users\kotttali\source\repos\CityInfo.API\CityInfo.API\
+2023-07-17 16:52:32.266 +02:00 [DBG] Hosting started
