@@ -1,3 +1,4 @@
+using System.Reflection;
 using System.Text;
 using CityInfo.API;
 using CityInfo.API.DbContexts;
@@ -32,7 +33,14 @@ builder.Services.AddControllers(option =>
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+// Enable documentation from /// in swagger
+builder.Services.AddSwaggerGen(setupAction =>
+{
+    var xmlCommentsFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlCommentsFullPath = Path.Combine(AppContext.BaseDirectory, xmlCommentsFile);
+
+    setupAction.IncludeXmlComments(xmlCommentsFullPath);
+});
 builder.Services.AddSingleton<FileExtensionContentTypeProvider>();
 
 // Inject instance of MailService
